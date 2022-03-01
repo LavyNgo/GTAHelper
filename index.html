@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- title -->
+        <title>Home Page | GTAHelper</title>
+
+        <!-- style CSS file -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- preload images and css file to prevent flickering problem -->
+        <link rel="preload" href="images/background1.jpg" as="image">
+        <link rel="preload" href="images/logo2.jpg" as="image">
+        <link rel="preload" href="images/subpage4.jpg" as="image">
+        <link rel="preload" href="images/subpage5.jpg" as="image">
+        <link rel="preload" href="images/subpage7.jpg" as="image">
+        <link rel="preload" href="style.css" as="style">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="/docs/5.0/dist/css/bootstrap.min.css" 
+            rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+
+        </head>
+    <body>
+        <!--create a top button-->
+        <button onclick="topFunction()" id="topBtn" title="Go to top">UP</button>
+
+        <!--header for navigation bar-->
+        <div id="header">
+            <div class="container-fluid justify-content-end">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand" href="index.html"><img class="logo" src="images/logo2.jpg"></img>GTAHelper</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="nav navbar-nav ms-md-auto text-center">
+                            <li class="nav-item active"><a class="nav-link" href="#myCarousel" data-text="Home">Home</a></li>  
+                            <li class="nav-item"><a class="nav-link" href="#aboutUs-page" data-text="About Us">About Us</a></li> 
+                            <li class="nav-item"><a class="nav-link" href="#" data-text="GTA Form">GTA Form</a></li>                                                        
+                            <li class="nav-item"><a class="nav-link" href="#" data-text="Help">Help</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="tooltip" 
+                                data-bs-placement="bottom" title="This is for admins only!" data-text="Admin Login">Admin Login</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!--for crousel slider-->
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active"></div>
+                <div class="carousel-item"></div>
+                <div class="carousel-item"></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!--About Us-->
+        <div id="aboutUs-page">
+            <h1>About Us</h1>
+            <div class="wrapper">
+                <div class="content">
+                    <h3>It's time to become a great sidekick!!!</h3>
+                    <br>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, recusandae quod iste nemo, 
+                        vel aspernatur repellat veniam voluptates laudantium eligendi a consequuntur et saepe beatae 
+                        quas nihil. Unde, cumque tempora?</p>
+                </div>
+                <div class="img-section">
+                    <img src="images/aboutus-img.jpg">
+                </div>
+            </div>
+        </div> 
+
+        <!---JavaScript Bootstrap--->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+
+        <!--TopBtn function-->
+        <script>
+            //Get the button
+            var topbutton = document.getElementById("topBtn");
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction(){
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    topbutton.style.display = "block";
+                } 
+                else{
+                    topbutton.style.display = "none";
+                }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+    </body>
+</html>
