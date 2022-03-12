@@ -86,7 +86,7 @@ body::-webkit-scrollbar {
     font-weight: 300;
     transform-style: preserve-3d;
     transform-origin: top;
-    box-shadow: 0 4px 10px rgb(0 0 0 / 0.2);
+
     box-shadow:
       3.5px 3.6px 1.2px rgba(0, 0, 0, 0.191),
       7.8px 8px 3.4px rgba(0, 0, 0, 0.216),
@@ -96,6 +96,10 @@ body::-webkit-scrollbar {
       38.4px 39.5px 39.2px rgba(0, 0, 0, 0.208),
       35px 36px 80px rgba(0, 0, 0, 0.2)
     ; 
+}
+
+.nav-link:last-child{
+    color: black;
 }
 
 .nav-link:hover{
@@ -366,6 +370,7 @@ body::-webkit-scrollbar {
     color: white;
     background: rgb(18, 53, 49, 0.65);
     overflow-y: auto;
+    border: solid;
 }
 
 .container .title{
