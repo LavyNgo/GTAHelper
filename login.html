@@ -20,7 +20,7 @@
         <a href="https://www.umkc.edu/"><img src="/images/UMKC_white_cropped.png" alt=""></a>
         <div class="title">GTA Application Portal</div>
         <div class="holder">
-            <button type="reset" id="logOutBtn" onclick="logOut()">Log Out</button>
+            <button type="reset" id="logOutBtn" disabled>Log Out</button>
         </div>
     </section>
 
@@ -28,13 +28,15 @@
         <div class="container-sm">
             <!-- <h1>LOGIN</h1> -->
             <form id="login" name="theform" class="login-form">
-                <div class="formField">
-                    <input type="text" placeholder="Username" id="username" required>
+                <div class="formfield">
+                    <input type="text" placeholder="Username" id="username" name="username" autocomplete="off">
+                    <small></small>
                 </div>
-                <div class="formField">
-                    <input type="password" placeholder="Password" id="password" required>
+                <div class="formfield">
+                    <input type="password" placeholder="Password" id="password" name="password" autocomplete="off">
+                    <small></small>
                 </div>
-                <button type="reset" class="submitbtn" onclick="getInput()">Log in</button>
+                <input id="subBtn" type="submit" value="Log In">
                 <p class="message">Forgot password? <a href="https://www.umkc.edu/is/password/">Click here!</a>
             </form>
         </div>

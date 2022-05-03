@@ -108,26 +108,43 @@ body {
     color: white;
 }
 
-.container-sm input {
-    background: #f2f2f2;
-    width: 100%;
-    outline: 0;
-    border: 0;
-    margin-bottom: 20px;
-    padding: 15px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    box-sizing: border-box;
-    border-radius: 5px;
+.formfield {
+    margin-bottom: 15px;
 }
 
-.container-sm button {
+.formfield input {
     width: 100%;
+    border: solid 2px #f0f0f0;
+    border-radius: 100px;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    display: block;
+}
+
+.formfield input:focus {
+    outline: none;
+}
+
+.formfield.error input {
+    border-color: red;
+}
+
+.formfield.success input {
+    border-color: green;
+}
+
+.formfield small {
+    color: red;
+}
+
+.container-sm form #subBtn {
+    width: 150px;
     background: rgb(255, 213, 47, 1);
     text-transform: uppercase;
     outline: 0;
     border: 0;
-    margin-bottom: 20px;
+    margin: 40px 0 30px 0;
     padding: 15px;
     font-size: 14px;
     letter-spacing: 1px;
@@ -136,9 +153,13 @@ body {
     cursor: pointer;
 }
 
-.container-sm button:hover {
+.container-sm form #subBtn:hover {
     background: rgb(253, 183, 26, 1);
 
+}
+
+.container-sm small {
+    color: rgb(255, 213, 47, 1);
 }
 
 .container-sm p {

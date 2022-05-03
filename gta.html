@@ -21,7 +21,7 @@
 
 <body>
     <!--header for navigation bar-->
-    <nav class="navbar navbar-light bg-light">
+    <!-- <nav class="navbar navbar-light bg-light">
         <div class="container-fluid justify-content-between">
             <a href="https://www.umkc.edu/"><img src="/images/UMKC_white_cropped.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -53,7 +53,14 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </nav> -->
+    <section id="headpart">
+        <a href="https://www.umkc.edu/"><img src="/images/UMKC_white_cropped.png" alt=""></a>
+        <div class="title">GTA Application Portal</div>
+        <div class="holder">
+            <button type="reset" id="logOutBtn" disabled>Log Out</button>
+        </div>
+    </section>
 
     <!--GTA Form-->
     <div id="GTAform-page">
@@ -79,7 +86,11 @@
                     </div>
                     <div class="formField">
                         <span class="detail">Level(BS/MS/PHD):</span>
-                        <input type="text" id="level" placeholder="BS/MS/PHD">
+                        <select>
+                            <option value="BS">BS</option>
+                            <option value="MS">MS</option>
+                            <option value="PHD">PHD</option>
+                        </select>
                     </div>
                     <div class="formField">
                         <span class="detail">Graduating Semester:</span>
@@ -100,7 +111,12 @@
                     </div>
                     <div class="formField">
                         <span class="detail">Major (CS/IT/ECE/EE):</span>
-                        <input type="text" id="major" placeholder="Major">
+                        <select>
+                            <option value="CS">CS</option>
+                            <option value="IT">IT</option>
+                            <option value="ECE">ECE</option>
+                            <option value="EE">EE</option>
+                        </select>
                     </div>
                     <div class="formField">
                         <span class="detail">Courses you could teach or grade for (ex. CS 201L/CS 5540/ECE 216,
@@ -108,15 +124,22 @@
                         <input type="text" id="courses" placeholder="Courses">
                     </div>
                     <div class="formField">
-                        <span class="detail">Status-International or Domestic (If you are on an F-1 visa you are
+                        <span class="detail">Status - International or Domestic (If you are on an F-1 visa you are
                             international.
                             If you are a citizen or permanent resident, you are domestic):</span>
-                        <input type="text" id="status" placeholder="Status">
+                        <!-- <input type="text" id="status" placeholder="Status"> -->
+                        <select>
+                            <option value="Domestic">Domestic</option>
+                            <option value="International">International</option>
+                        </select>
                     </div>
                     <div class="formField">
                         <span class="detail">(International Students ONLY) Are you GTA Certified? If so, which term did
                             you complete your certification?:</span>
-                        <input type="text" placeholder="Certificate">
+                        <select>
+                            <option value="CS">Yes</option>
+                            <option value="IT">No</option>
+                        </select>
                     </div>
                 </div>
                 <button type="reset" class="submitBtn" id="submittBtn" onclick="AddRow()">Submit</button>
